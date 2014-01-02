@@ -1,0 +1,15 @@
+{
+  "name": "coffee-log",
+  "private": true,
+  "version": "0.0.1",
+  "description": "A small app for logging the coffee I taste",
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "prompt": "~0.2.12"
+  }
+}
