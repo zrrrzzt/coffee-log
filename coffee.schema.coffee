@@ -29,6 +29,14 @@ module.exports = [
   message: "Roastery"
   required: true
 ,
+  name: "taste"
+  message: "Tasting notes"
+  required: false
+,
+  name: "rating"
+  message: "Rating"
+  required: false
+,
   name: "comments"
   message: "Comments"
   required: false
