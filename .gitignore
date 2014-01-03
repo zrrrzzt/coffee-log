@@ -2,3 +2,5 @@
 .idea
 coffees
 node_modules
+*.js
+*.map
