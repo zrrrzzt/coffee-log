@@ -7,6 +7,7 @@ At the moment each coffee is saved in a .json-file. In the future I might add a 
 ##Dependencies##
 
 Prompt [GitHub](https://github.com/flatiron/prompt)
+CoffeeScript [GitHub](https://github.com/jashkenas/coffee-script)
 
 ##Setup##
 
@@ -28,11 +29,22 @@ Get dependencies
 $ npm install
 ```
 
+Compile the .coffee files
+
+```
+$ coffee -c *.coffee
+```
+
 ##Usage##
+
+Run from the terminal
 
 ```
 $ node index.js
 ```
+
+The script will create a folder called "coffees" at first run.
+This is where the .json-files will be saved.
 
 
 
