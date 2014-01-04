@@ -8,6 +8,7 @@ At the moment each coffee is saved in a .json-file. In the future I might add a 
 
 Prompt [GitHub](https://github.com/flatiron/prompt)
 CoffeeScript [GitHub](https://github.com/jashkenas/coffee-script)
+jasmine-node-karma [GitHub](https://github.com/HuzuTech/jasmine-node-karma)
 
 ##Setup##
 
