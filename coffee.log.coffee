@@ -2,8 +2,8 @@ fs = require("fs")
 
 module.exports =
 
-  getCoffees: ->
-    [1,2,3]
+  listCoffees: (folderPath, callback) ->
+    fs.readdir(folderPath, callback)
 
-  printCoffee: (coffee) ->
-    coffee
+  getCoffee: (path, callback) ->
+    fs.readFile(path, callback)

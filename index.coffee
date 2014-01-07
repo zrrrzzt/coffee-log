@@ -1,6 +1,8 @@
 fs = require("fs")
+# process = require("process")
 prompt = require("prompt")
 schema = require("./coffee.schema")
+coffeeLog = require("./coffee.log")
 saveFolder = "coffees"
 
 saveCoffee = (coffee) ->
@@ -41,4 +43,21 @@ checkDirectory = (directory) ->
       console.log "Directory exists. Let's add some coffee"
       newCoffee()
 
-checkDirectory saveFolder
+listCoffees = (directory) ->
+  coffeeLog.listCoffees(directory, (err, files) ->
+    if err
+      console.log err
+    else
+      console.log(file) for file in files
+  )
+
+whatToDo = (args) ->
+  if "add" in args
+    checkDirectory saveFolder
+  else if "list" in args
+    listCoffees saveFolder
+  else
+    msg = "Please make you choice. Call with 'add' or 'list'"
+    console.log(msg)
+
+whatToDo(process.argv)

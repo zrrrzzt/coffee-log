@@ -7,8 +7,19 @@ At the moment each coffee is saved in a .json-file. In the future I might add a 
 ##Dependencies##
 
 Prompt [GitHub](https://github.com/flatiron/prompt)
+
 CoffeeScript [GitHub](https://github.com/jashkenas/coffee-script)
-jasmine-node-karma [GitHub](https://github.com/HuzuTech/jasmine-node-karma)
+
+```
+$ npm install -g coffee-script
+```
+
+jasmine-node [GitHub](https://github.com/mhevery/jasmine-node)
+
+```
+$ npm install -g jasmine-node
+```
+
 
 ##Setup##
 
@@ -24,7 +35,7 @@ cd into the directory
 $ cd coffee-log
 ```
 
-Get dependencies
+Get local dependencies
 
 ```
 $ npm install
@@ -38,14 +49,30 @@ $ coffee -c *.coffee
 
 ##Usage##
 
-Run from the terminal
+Run from the terminal.
+
+To add a new coffee
 
 ```
-$ node index.js
+$ node index.js add
 ```
 
 The script will create a folder called "coffees" at first run.
 This is where the .json-files will be saved.
+
+To list all coffees
+
+```
+$ node index.js list
+``
+
+##Test##
+
+Run from the terminal
+
+````
+$ jasmine-node --coffee test
+``
 
 
 
