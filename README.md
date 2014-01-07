@@ -72,7 +72,7 @@ Run from the terminal
 
 ````
 $ jasmine-node --coffee test
-``
+```
 
 
 
