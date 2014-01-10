@@ -43,12 +43,22 @@ checkDirectory = (directory) ->
       console.log "Directory exists. Let's add some coffee"
       newCoffee()
 
+
+getCoffee = (path) ->
+  coffeeLog.getCoffee(path, (err, data) ->
+    if err
+      console.log err
+    else
+      coffee = JSON.parse(data)
+      console.log(coffee.name)
+  )
+
 listCoffees = (directory) ->
   coffeeLog.listCoffees(directory, (err, files) ->
     if err
       console.log err
     else
-      console.log(file) for file in files
+      getCoffee(directory + '/' + file) for file in files
   )
 
 whatToDo = (args) ->
