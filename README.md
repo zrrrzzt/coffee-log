@@ -64,7 +64,7 @@ To list all coffees
 
 ```
 $ node index.js list
-``
+```
 
 ##Test##
 

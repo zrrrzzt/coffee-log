@@ -50,7 +50,7 @@ getCoffee = (path) ->
       console.log err
     else
       coffee = JSON.parse(data)
-      console.log(coffee.name)
+      console.log(coffee.name + ' - ' + coffee.roastery)
   )
 
 listCoffees = (directory) ->
@@ -61,13 +61,23 @@ listCoffees = (directory) ->
       getCoffee(directory + '/' + file) for file in files
   )
 
+countCoffees = (directory) ->
+  coffeeLog.countCoffees(directory, (err, files) ->
+    if err
+      console.log err
+    else
+      console.log files.length
+  )
+
 whatToDo = (args) ->
   if "add" in args
     checkDirectory saveFolder
   else if "list" in args
     listCoffees saveFolder
+  else if "count" in args
+    countCoffees saveFolder
   else
-    msg = "Please make you choice. Call with 'add' or 'list'"
+    msg = "Please make you choice. Call with 'add', 'list' or 'count'"
     console.log(msg)
 
 whatToDo(process.argv)
