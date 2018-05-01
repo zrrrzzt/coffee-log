@@ -10,6 +10,6 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "prompt": "~1.0.0"
+    "prompt": "1.0.0"
   }
 }
